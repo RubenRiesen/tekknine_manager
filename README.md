@@ -3,31 +3,8 @@
 
 Ein Discord Bot mit verschiedenen Funktionen zur Interaktion und Verwaltung von Discord-Guilds.
 
-## Installation
 
-1. Klone dieses Repository:
-    ```bash
-    git clone <repository-url>
-    ```
-2. Installiere die benötigten Abhängigkeiten:
-    ```bash
-    npm install
-    ```
-
-3. Erstelle eine `config.json` Datei basierend auf der mitgelieferten Vorlage und füge deinen Discord-Bot-Token und andere erforderliche Konfigurationsinformationen hinzu.
-
-## Konfiguration
-
-Stelle sicher, dass die `config.json` Datei folgende Struktur hat:
-
-```json
-{
-  "token": "YOUR_BOT_TOKEN",
-  "guildId": "YOUR_GUILD_ID"
-}
-```
-
-## Verwendete Technologien
+## Abhängigkeiten
 
 - **discord.js**: Eine leistungsstarke JavaScript-Bibliothek zur Interaktion mit der Discord-API.
 - **mysql2/promise**: Ein MySQL-Client für Node.js mit Promise-Unterstützung.
@@ -38,10 +15,10 @@ Stelle sicher, dass die `config.json` Datei folgende Struktur hat:
 ## Bot-Befehle
 
 ### review
-- **Beschreibung:** Öffnet ein Formular für eine Bewertung.
+- **Beschreibung:** Review-System zur Bewertung von bestellten Produkten oder Dienstleistungen.
 
 ### reminder
-- **Beschreibung:** Sendet eine Erinnerung an den Benutzer, dass eine neue Antwort vorliegt.
+- **Beschreibung:** Kann in Tickets verwendet werden um dem User eine Erinnerung per DM zu schicken, dass eine Antwort gekommen ist.
 
 ### ticket-add
 - **Beschreibung:** Fügt einen Benutzer zum Ticket hinzu.
@@ -49,22 +26,20 @@ Stelle sicher, dass die `config.json` Datei folgende Struktur hat:
   - `user`: Der Benutzer, der zum Ticket hinzugefügt werden soll (erforderlich).
 
 ### lookup
-- **Beschreibung:** Zeigt Informationen über einen Benutzer an.
+- **Beschreibung:** Zeigt Informationen über einen Benutzer an und gibt die möglichkeit diesen zu Bannen, Kicken, Timeouten.
 - **Optionen:**
   - `user`: Der Benutzer, über den Informationen angezeigt werden sollen (erforderlich).
 
 ### paysafecard
-- **Beschreibung:** Spezifische Funktionen im Zusammenhang mit Paysafecard-Embeds.
+- **Beschreibung:** Erstellt ein Modal damit der Paysafecard-Code sicher übermittelt werden kann.
 
 ## Starten des Bots
 
 Um den Bot zu starten, verwende folgenden Befehl:
 
 ```bash
-node index.js
+yarn start
 ```
-
-Stelle sicher, dass der Bot die richtigen Berechtigungen in deiner Discord-Guild hat, um ordnungsgemäß zu funktionieren.
 
 ## Lizenz
 
